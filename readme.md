@@ -1,0 +1,1 @@
+1. réteg: projekt váza: könyvtárak étrehozása, csomagok letöltése git, git-hub, git-ignore, .env
