@@ -42,7 +42,7 @@ module.exports = {
             if (changes.password.length<6) throw new AppError('A jelszónak legalább 6 karaktenek kell lennie!', 400)
             changes.password= await bcrypt.hash(changes.password, SALT_ROUNDS)
         }
-
+        
         const user = await  userRepository.update(id, changes);
         if(!user) throw new AppError('A felhasználó nem található!', 404)
         return user
