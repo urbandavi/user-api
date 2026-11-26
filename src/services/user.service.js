@@ -18,7 +18,8 @@ module.exports = {
     },
     async getById(id) {
         const user = await userRepository.findById(id);
-        if (!user) throw new AppError('FElhasználó nem található', 404)
+        if (!user) throw new AppError('Felhasználó nem található', 404) 
+        return user;
     },
     async create({ name, email, password, role }) {
         if (!name || !email || !password) throw new AppError('A név, az email, a jelszó kötelező!', 400)
